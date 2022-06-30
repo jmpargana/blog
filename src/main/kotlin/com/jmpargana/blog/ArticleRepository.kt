@@ -9,7 +9,6 @@ import java.util.*
 @Repository
 interface ArticleRepository : ReactiveCrudRepository<Article, UUID> {
 
-    @Query("")
     fun matchNeedle(needle: String) : Flux<Article>
 
 }
