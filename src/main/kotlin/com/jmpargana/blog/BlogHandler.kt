@@ -7,7 +7,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
-@Controller
 class BlogHandler {
 
     fun getById(req: ServerRequest) : Mono<ServerResponse> {

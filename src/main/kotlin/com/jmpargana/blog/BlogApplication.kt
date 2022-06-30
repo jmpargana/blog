@@ -19,10 +19,8 @@ fun main(args: Array<String>) {
 @Configuration
 class BlogAppRouter {
 
-	@Autowired
-	lateinit var handler: BlogHandler
 	@Bean
-	fun route() = router {
+	fun route(handler: BlogHandler) = router {
 		(accept(MediaType.APPLICATION_JSON) and "/blogs").nest {
 			GET("/{id}", handler::getById)
 		}
